@@ -1,4 +1,5 @@
 import Vapor
+import LeafProvider
 
 extension Droplet {
     func setupRoutes() throws {
@@ -20,6 +21,11 @@ extension Droplet {
 
         get("description") { req in return req.description }
         
+        get("helloworld") {req in
+            return try self.view.make("hello1")
+        }
+
         try resource("posts", PostController.self)
     }
 }
+

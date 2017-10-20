@@ -1,6 +1,7 @@
 import Vapor
 import HTTP
 
+
 /// Here we have a controller that helps facilitate
 /// RESTful interactions with our Posts table
 final class PostController: ResourceRepresentable {
