@@ -25,6 +25,8 @@ extension Droplet {
             return try self.view.make("hello1")
         }
 
+        get("secondpage") {req in return try self.view.make("secondpage") }
+
         try resource("posts", PostController.self)
     }
 }
